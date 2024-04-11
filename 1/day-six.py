@@ -17,3 +17,20 @@ print(games)
 #you can delete some thing from you list by 
 
 games.remove("halo")
+
+#creating pyhton dict
+
+games_1 = {"candy crush" : "candy", "freefire" : "shooting"}
+
+print(games_1[1])
+
+#adding new key
+
+games_1.append
+{"pubg":"fps"}
+
+#to remove
+
+games_1.remove
+{"candy crush":"candy"}
+
