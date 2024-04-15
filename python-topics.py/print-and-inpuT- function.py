@@ -11,11 +11,9 @@ print("hello"+" "+"shrivas")
 input("how was your day")
 
 #the input function can be used in combination with print function 
-
 print("that great to hear"+input("how was your day"))
 
 #variables are enetites which contain or represent a value. infinite amount of value can be added.
-
 name = input("what is your name")
 
 print(name)

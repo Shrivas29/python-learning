@@ -1,0 +1,26 @@
+print("welcome to the amount divider")
+
+num_char = int(input("what is the amount of your bill?"))
+people = int(input("how much people are spliting the bill"))
+def total(num_char,people):
+    return num_char / people
+a = num_char / people
+
+print(a)
+new_tip = int(input("how much you would like to tip??"))
+
+def tip(new_tip,):
+    return new_tip
+b = new_tip / 100
+c = b * people
+
+print(c)
+
+
+    
+
+
+
+
+
+    
