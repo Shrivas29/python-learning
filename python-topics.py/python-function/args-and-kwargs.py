@@ -29,6 +29,7 @@ def vari():
         print("it is a palindrom")
     else:
         print("its not a plindrome")
+vari()
 
 
 

@@ -25,7 +25,7 @@ print(goat["messi"])
 
 #to find what keys and values are there in dict we use items 
 
-goat.items()
+print(goat.items())
 
 #you can a change or update a keys value by
 
