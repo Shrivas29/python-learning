@@ -6,7 +6,7 @@ class Student:
         self.age = age
     
     def get_grade(self):
-        return self.grade() 
+        return self.grade 
     
 class Course:
 
@@ -17,15 +17,17 @@ class Course:
 
     def add_student(self,student):
         if len(self.students) < self.max_student:
-           self.students.append(student) 
+           self.students.append(student)
+           print(self.students) 
            return True
         return False
 
-    def Average_grade(self):
+    def average_grade(self):
         value = 0
         for student in self.students:
-            value += student.Average_grade()
+             value += student.get_grade()
         return value / len(self.students)
+    
 s1 = Student("tim",95,16) 
 s2 = Student("sam",85,16)
 s3 = Student("kim",65,16)
@@ -33,5 +35,5 @@ s3 = Student("kim",65,16)
 course = Course("science",2)
 course.add_student(s1)
 course.add_student(s2)
+print(course.average_grade())
 
-print(course.Average_grade())
