@@ -1,4 +1,4 @@
-class FC:
+class Math:
     def __init__(self, letter="b"):
         self.letter = [letter]
 
@@ -20,17 +20,17 @@ class FC:
         else:
             print("The letter 'a' is not in the list to remove")
 
-fc = FC()
+fc = Math()
 
 
-fc.add("a")
-print(fc.letter)  
+Math.add("a")
+print(Math.letter)  
 
-fc.addbetween(1,"c")
-print(fc.letter) 
+Math.addbetween(1,"c")
+print(Math.letter) 
 
-fc.remove("a")
-print(fc.letter)  
+Math.remove("a")
+print(Math.letter)  
 
     
 
