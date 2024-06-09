@@ -1,4 +1,4 @@
-# #method 1
+#method 1
 # from collections import defaultdict
 
 # def group_anagrams(words):
@@ -6,11 +6,11 @@
 
 #     for word in words:
 #         sorted_word ="".join(sorted(word))
-#         anagram_dict[sorted_word].append(word)
+#         anagram_dict[sorted_word].append(word) 
 
 #     results = list(anagram_dict.values())
 #     return results
-
+ 
 # input_words = ["cat" , "ate" , "eat" , "tea"]
 # output = group_anagrams(input_words)
 # print(output)        
