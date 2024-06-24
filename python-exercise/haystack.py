@@ -5,18 +5,18 @@
 # #example usage 
 
 
-# needle = "hello" # = download this example will give false since there is no doenload in hello world 
+# needle = "lol" # = download this example will give false since there is no doenload in hello world 
 # haystack = "hello world" 
 # print(findhaystack(haystack,needle)) #calling to check if the given example is true 
 
 #method2(find)
 
 def findneedle(haystack,needle):
-    return haystack.find(needle) !=1
+    return haystack.find(needle)
 
 #example usage 
 
-needle = "hello"
+needle = "world"
 haystack = "hello world"
 print(findneedle(haystack,needle))
 
