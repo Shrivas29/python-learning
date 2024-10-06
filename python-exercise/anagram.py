@@ -18,12 +18,16 @@
 #method 2 
 str = ["cat","ate","eat","tea"]
 dic = {}
-
-for x in str:
-    w ="".join(sorted(x))
-
+def finding_same():
+    for x in str:
+        print(x)
+    w = "".join(sorted(x))
+    print(w)
+    
     if x in dic:
         dic[x].append(x)
     else:
-        dic[w]=[x]
+        dic[w] = [x]
 print(list(dic.values()))
+
+finding_same()

@@ -20,6 +20,11 @@
 
 #method 2(using functions)
 
+nums = [2,7,8,7]
+target= 14
+
+sum(nums, target)
+
 def sums(num,target):
 
     d ={}

@@ -33,7 +33,7 @@ images = [rock , paper , knife]
 
 user_choice = int(input("what do you wanna choose? type0 for rock, type 1 for knife, type 2 for paper.\n"))
 computer_choice = random.randint(0,2)
-print(f"computer chose,{computer_choice}")
+print("computer chose",computer_choice)
 if user_choice >=3 or user_choice < 0:
   print("you have typed an invalid number")
 else: 

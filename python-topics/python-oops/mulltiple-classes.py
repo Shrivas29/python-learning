@@ -35,5 +35,5 @@ s3 = Student("kim",65,16)
 course = Course("science",2)
 course.add_student(s1)
 course.add_student(s2)
-print(course.average_grade())
+print(course.average_grade()) 
 

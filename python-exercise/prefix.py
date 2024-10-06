@@ -15,3 +15,4 @@ def find_commonprefix(str):
         res += str[0][i]
     return res
 print(find_commonprefix(str))
+            
