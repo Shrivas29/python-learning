@@ -1,0 +1,17 @@
+<form action="/submit-form" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+  
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- action: Specifies the URL where the form data will be sent for processing.
+Example: action="/submit-form"
+method: Defines the HTTP method to send the form data.
+"get": Sends form data appended to the URL as a query string.
+"post": Sends form data in the body of the HTTP request (more secure).
+enctype: Specifies the encoding type when submitting the form. For example:
+"multipart/form-data": Used when the form includes file uploads. -->
