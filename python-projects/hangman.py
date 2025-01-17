@@ -2,31 +2,39 @@
 
 ## we will be using concepts like modules,loops,list,string functions 
 
-import random
+import random 
+words = ["apple","camel","between","banana"]
+words_random = random.choice(words)
 
-words = ["car","apple","orange","water","millon"]
 
-word_random = random.choice(words)
-print(word_random)
-get_word = input("enter a letter ?")
-print(get_word)
+# creating a placeholder 
 
-if get_word in word_random:
-    print("you are one step closer")
-else:
-    print("you are wrong")
+placeholder = "_"
+word_ran = len(words_random)
 
-def blanks():
-    dash =  ""
-    for i in word_random:
-        dash += "_"
-        print(dash)
-blanks()
+for position in range(word_ran):
+    placeholder += "_"
+    print(placeholder)
 
-def put():
-    placements = ""
-    for get_word in word_random:
-        placements += get_word 
-        print(placements)
-put()
+# we are creating a variable to store the empty string value 
+correct = []
+game_over = False
+while not game_over:
+    get_letter = input("enter a letter")
+    display = ""
+    
+    for letter in words_random:
+        if letter == get_letter:
+            display += letter
+            correct.append(get_letter)
+        elif letter in correct:
+            display += letter
 
+        else:
+            display += "_"
+
+    print(display)
+
+    if "_" not in display:
+        game_over = True
+        print("you win")

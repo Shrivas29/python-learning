@@ -7,13 +7,13 @@ class Pizza:
         self.prize = prize 
         self.type = type
 
-def started(self):
-        print("this "+self.type+" just started cooking")
-def finished(self):
-        print("this "+self.type+" just finished cooking")
+    def started(self):
+        print(f"this {self.type} just started cooking")
+    def finished(self):
+        print(f"this {self.type} just started cooking")
 
-@staticmethod
-def middle(type):
+    @staticmethod
+    def middle(type):
         print("and the pizza name is" + type)
             
 pizza1 = Pizza("cheese","dominos",7,"veg")
@@ -24,5 +24,5 @@ pizza2.started()
  
 #calling a static method
 
-Pizza("cheese","dominos",7,"veg").middle()
+Pizza.middle("non veg")
 
