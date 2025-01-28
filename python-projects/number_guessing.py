@@ -4,11 +4,15 @@
 from random import randint
 EASY = 10
 HARD = 5
-def check(check_num,actual_ans):
+def check(check_num,actual_ans,turns):
     if check_num > actual_ans:
         print("too high")
+        turns -=1 
+        return turns
     elif check_num < actual_ans:
         print("too low")
+        turns -=1 
+        return turns
     else:
         print(f"you are correct{actual_ans}")
 
@@ -20,10 +24,14 @@ def set_defi():
     else:
         return  HARD
 
-
-print("welcome to number guessing game")
-print("you have to guess a number between 1 to 100")
-turns = set_defi()
-print(f"you have {turns}")
-answer = randint(1,100)
-guess = int(input("enter a number"))
+def game():
+    print("welcome to number guessing game")
+    print("you have to guess a number between 1 to 100")
+    turns = set_defi()
+    print(f"you have {turns}")
+    answer = randint(1,100)
+    guess = 0 
+    while guess != answer:
+        guess = int(input("enter a number"))
+        check(guess,answer,turns)
+game( )
