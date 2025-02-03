@@ -68,16 +68,43 @@
 #/\
 #||
 #||
-#project discription
+#project discription_
 
 
 
 
-MENU = {"espresso":{"ingreidients": {"water": 50,"coffee": 18},"cost":2.5},##### this is the menu we will be working with 
-    "latte":{"ingreidients": {"water": 200,"milk":150,"coffee": 24},"cost":2.5},
-    "cappachino":{"ingreidients": {"water": 250,"milk":100,"coffee": 24},"cost":2.5}}
+MENU = {"espresso":{"ingreidients": {"water": 50,"coffee": 18},"cost":2},##### this is the menu we will be working with 
+    "latte":{"ingreidients": {"water": 200,"milk":150,"coffee": 24},"cost":5},
+    "cappachino":{"ingreidients": {"water": 250,"milk":100,"coffee": 24},"cost":6}}
 
-resource = {"water":300,"milk":200,"coffee":100}#### this is the resources the coffee machine will be having 
- 
+resource = {"water":300,"milk":200,"coffee":100,"money":0}#### this is the resources the coffee machine will be having 
+def resource_suffi(order_ingredients):
+    is_enough = True
+    for item in order_ingredients:
+        order_ingredients[item] >= resource[item]
+        print(f"sorry resource is not sufficent enough{item}")
+        is_enough = False
+    return is_enough 
 
+def procces_coins():
+    print("please enter coins")
+    total += int(input("how many quarters")) * 0.25
+    total += int(input("how many dimes")) * 0.1
+    total += int(input("how many nickel")) * 0.05
+    total += int(input("how many pennies")) * 0.01
+    return total
 
+is_on = True
+while is_on:
+    choice = input("what would you like(espresso/latte/cappachino)")
+    if choice == "off":
+        is_on = False
+    elif choice == "report":
+        print(resource["water"])
+        print(resource["milk"])
+        print(resource["water"])
+        print(resource["money"])
+    else:
+        drink = MENU[choice]
+        resource_suffi(drink["ingreidients"])
+        procces_coins()
