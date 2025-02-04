@@ -71,7 +71,7 @@
 #project discription_
 
 
-
+amount = 0 
 
 MENU = {"espresso":{"ingreidients": {"water": 50,"coffee": 18},"cost":2},##### this is the menu we will be working with 
     "latte":{"ingreidients": {"water": 200,"milk":150,"coffee": 24},"cost":5},
@@ -81,18 +81,36 @@ resource = {"water":300,"milk":200,"coffee":100,"money":0}#### this is the resou
 def resource_suffi(order_ingredients):
     is_enough = True
     for item in order_ingredients:
-        order_ingredients[item] >= resource[item]
-        print(f"sorry resource is not sufficent enough{item}")
-        is_enough = False
+        if order_ingredients[item] >= resource[item]:
+            print(f"sorry resource is not sufficent enough{item}")
+            is_enough = False
     return is_enough 
 
-def procces_coins():
+def procces_coins(total):
     print("please enter coins")
     total += int(input("how many quarters")) * 0.25
     total += int(input("how many dimes")) * 0.1
     total += int(input("how many nickel")) * 0.05
     total += int(input("how many pennies")) * 0.01
     return total
+
+def transaction_succesful(money_recieved,drink_cost):
+    if money_recieved >= drink_cost:
+        change = round(money_recieved - drink_cost,2)
+        print("here is the change")
+        global profit
+        profit += drink_cost
+        return True
+    else:
+        print("sorry thats not enough money")
+        print("the money will be refunded")
+        return False
+
+def make_coffee(drink_name,order_ingredeint):
+    for item in order_ingredeint:
+        resource[item] -= order_ingredeint[item]
+    print(f"here is your{drink_name}")
+
 
 is_on = True
 while is_on:
@@ -106,5 +124,9 @@ while is_on:
         print(resource["money"])
     else:
         drink = MENU[choice]
-        resource_suffi(drink["ingreidients"])
-        procces_coins()
+        if resource_suffi(drink["ingreidients"]):
+            payment = procces_coins(amount)
+            if transaction_succesful(payment,drink["cost"]):
+                make_coffee(choice,drink["ingreidients"])
+
+       
