@@ -6,5 +6,5 @@
 lis_1 = [1,2,3]
 lis_2 = [4,5,6]
 for i in zip(lis_1,lis_2):
-    summing_lists = sum(i)
-    print(summing_lists)
+    lis3 = sum(i)
+    print(lis3)
