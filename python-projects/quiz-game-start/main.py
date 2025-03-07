@@ -10,4 +10,7 @@ for i in question_data:
     
 
 quiz = Quizbrain(questions_bank) 
-quiz.next_question()
+while quiz.still_has_question():
+    quiz.next_question()
+
+    
